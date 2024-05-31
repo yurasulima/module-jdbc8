@@ -15,6 +15,7 @@ public class DatabaseQueryService {
         Flyway flyway = Flyway.configure().dataSource("jdbc:h2:tcp://localhost/~/test", "sa", "").load();
         flyway.migrate();
 
+
         List<MaxProjectCountClient> findMaxProjectsClientList = new DatabaseQueryService().findMaxProjectsClient();
         System.out.println("findMaxProjectsClientList = " + findMaxProjectsClientList);
 
